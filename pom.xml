@@ -93,8 +93,17 @@
 	                <httpConnector>
 	                    <port>8081</port> <!-- Port Configuration -->
 	                </httpConnector>
-	            </configuration>          
-           
+	            </configuration>    
+	            <executions>
+			        <execution>
+			            <goals>
+			                <goal>run</goal>
+			            </goals>
+			            <configuration>
+			                <daemon>true</daemon> <!-- This will run Jetty in the background -->
+			            </configuration>
+			        </execution>
+			    </executions>      
             </plugin>
         </plugins>
     </build>
